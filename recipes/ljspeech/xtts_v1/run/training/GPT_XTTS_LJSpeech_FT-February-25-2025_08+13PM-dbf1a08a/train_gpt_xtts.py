@@ -1,7 +1,3 @@
-"""
-https://docs.coqui.ai/en/latest/models/xtts.html#training
-Section: Advanced training
-"""
 import os
 import torch
 # Add version check for transformers
@@ -85,11 +81,9 @@ if not os.path.isfile(TOKENIZER_FILE) or not os.path.isfile(XTTS_CHECKPOINT):
 
 
 # Training sentences generations
-SPEAKER_WAV = "/Users/ywang/Downloads/LJSpeech-1.1/wavs/LJ001-0002.wav"
-if not os.path.exists(SPEAKER_WAV):
-    raise FileNotFoundError(f"Speaker reference file not found: {SPEAKER_WAV}")
-
-SPEAKER_REFERENCE = [SPEAKER_WAV]
+SPEAKER_REFERENCE = [
+    "./tests/data/ljspeech/wavs/LJ001-0002.wav"  # speaker reference to be used in training test sentences
+]
 LANGUAGE = config_dataset.language
 
 # Add all necessary safe globals for model loading
