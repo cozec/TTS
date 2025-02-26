@@ -41,7 +41,7 @@ GRAD_ACUMM_STEPS = 84  # set here the grad accumulation steps
 config_dataset = BaseDatasetConfig(
     formatter="ljspeech",
     dataset_name="ljspeech",
-    path="/Users/ywang/Downloads/LJSpeech-1.1/",
+    path="/Users/ywang/Downloads/LJSpeech-1.1/", #local path
     meta_file_train="/Users/ywang/Downloads/LJSpeech-1.1/metadata.csv",
     language="en",
 )
